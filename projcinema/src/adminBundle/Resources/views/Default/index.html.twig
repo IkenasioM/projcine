@@ -12,12 +12,12 @@
             <div class="col-md-8">{{ cine.nom }}</div>
             <div class="col-md-4">
                 <a href="{{ path('detailcinema', {'id': cine.id}) }}" class="btn btn-success">Détail</a>
+                <a href="" class="btn btn-success"><span class="glyphicon glyphicon-trash"></span></a>
             </div>
         {% endfor %}
         </div>
         <br>
         <a href="/addcinema" class="btn btn-default">Ajouter un cinema</a>
-        
     </div>
 </div> 
 {% endblock %}
