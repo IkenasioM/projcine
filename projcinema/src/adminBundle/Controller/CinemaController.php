@@ -7,18 +7,23 @@ use adminBundle\Entity\Cinema;
 use adminBundle\Entity\Salle;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
+use Unirest;
 class CinemaController extends Controller
 {
     /**
      * @Route("/detailcinema/{id}", name="detailcinema")
-    )
      */
     public function detailcinemaAction($id) //On lui demande un id du coup pour qu'il puisse le recuperer il faut le lui mettre en parametre
     {
-        $repository = $this->getDoctrine()->getManager()->getRepository('adminBundle:Cinema'); // Les films sont avec pas besoin de les rappeler
-        $repositorySalle = $this->getDoctrine()->getManager()->getRepository('adminBundle:Salle');
-        $cinema = $repository->find($id);
+
+        $headers = array('Accept' => 'application/json');
+
+        $cinemasResponse = Unirest\Request::get('http://cine.ws/cinemas/', $headers, null);
+        $cinema = $cinemasResponse->body;
+
+        //$repository = $this->getDoctrine()->getManager()->getRepository('adminBundle:Cinema'); // Les films sont avec pas besoin de les rappeler
+        //$repositorySalle = $this->getDoctrine()->getManager()->getRepository('adminBundle:Salle');
+        //$cinema = $repository->find($id);
         $salle = $repositorySalle->findBy(array ('cinema' => $cinema)); //on a plusieurs salles pour un cinema findbycinema permet de retrouver toutes les salles correspondantes
         if ( null === $cinema ){
             throw new NotFoundHttpException( "Ce cinema n'existe pas" );
@@ -61,6 +66,17 @@ class CinemaController extends Controller
      * @Route("/getfilm")
      */
     public function getfilmAction()
+    {
+        return $this->render('adminBundle:Cinema:gestfilm.html.twig', array(
+            // ...
+        ));
+    }
+
+
+    /**
+     * @Route("/deletecinema/{id}", name="deletecinema")
+     */
+    public function deletecinemaAction()
     {
         return $this->render('adminBundle:Cinema:gestfilm.html.twig', array(
             // ...

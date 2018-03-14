@@ -49,17 +49,17 @@ class __TwigTemplate_49929cd8fe16128e8e3858da4c514439292925a3debbae95a45e5dd9b3f
             // line 14
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("detailcinema", array("id" => $this->getAttribute($context["cine"], "id", array()))), "html", null, true);
             echo "\" class=\"btn btn-success\">Détail</a>
+                <a href=\"\" class=\"btn btn-default\"><span class=\"glyphicon glyphicon-trash\"></span></a>
             </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cine'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 18
         echo "        </div>
         <br>
         <a href=\"/addcinema\" class=\"btn btn-default\">Ajouter un cinema</a>
-        
     </div>
 </div> 
 ";
@@ -77,7 +77,7 @@ class __TwigTemplate_49929cd8fe16128e8e3858da4c514439292925a3debbae95a45e5dd9b3f
 
     public function getDebugInfo()
     {
-        return array (  59 => 17,  50 => 14,  44 => 12,  40 => 11,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  60 => 18,  50 => 14,  44 => 12,  40 => 11,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

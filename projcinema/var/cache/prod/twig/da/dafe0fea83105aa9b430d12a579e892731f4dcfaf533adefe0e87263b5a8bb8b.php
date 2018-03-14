@@ -38,7 +38,7 @@ class __TwigTemplate_3698cf63954d63f83eb00e8efb3b8a0d307d2570267439622460f4fed51
         echo "<div class=\"container\">
     <div class=\"container-fluid\">
         <h2>Ajouter un cinéma</h2>
-        <form>
+        <form action=>
             <br>
             <div class=\"form-group\">
                 <label for=\"\">Nom :</label>
