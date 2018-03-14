@@ -1,0 +1,41 @@
+version: '2'
+services:
+  wscine:
+    build: 
+      context: ./build/wscinema
+    image: lpirm-dfs-wscinema
+    container_name: lpirm-dfs-wscine
+    ports:
+      - "9999:80"
+    volumes:
+      - "./cine/:/var/www/html/cine"
+    networks:
+      - back-network
+  projcine:
+    build: 
+      context: ./build/projcinema
+    image: lpirm-dfs-projcinema
+    container_name: lpirm-dfs-projcine
+    ports:
+      - "9998:80"
+    volumes:
+      - "./projcinema/:/var/www/html/projcinema"
+    networks:
+      - back-network
+  mysql:
+    build:
+      context: build/mysql
+    image: lpirm-dfs-mysql
+    container_name: lpirm-dfs-mysql
+    volumes:
+      - "./mysql/:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: cine
+      MYSQL_USER: cine
+      MYSQL_PASSWORD: cine
+      MYSQL_ROOT_PASSWORD: cine
+    networks:
+      - back-network
+networks:
+  back-network: 
+    driver: bridge

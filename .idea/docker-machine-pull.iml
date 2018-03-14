@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/cine/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/cine/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/doctrine-cache-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/exsyst/swagger" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/friendsofsymfony/rest-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/incenteev/composer-parameter-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/nelmio/api-doc-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/phpunit/phpunit-mock-objects" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/psr/link" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sensio/distribution-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sensio/generator-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/sensiolabs/security-checker" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/monolog-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/phpunit-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/polyfill-apcu" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/polyfill-php56" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/polyfill-util" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/swiftmailer-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/symfony/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/willdurand/jsonp-callback-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/willdurand/negotiation" />
+      <excludeFolder url="file://$MODULE_DIR$/cine/vendor/zircote/swagger-php" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

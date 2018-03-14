@@ -1,0 +1,51 @@
+version: '2'
+services:
+  wscine:
+    build: 
+      context: ./build/wscinema
+    image: lpirm-dfs-wscinema
+    container_name: lpirm-dfs-wscine
+    ports:
+      - "9999:80"
+    volumes:
+      - "./cine/:/var/www/html/cine"
+    networks:
+      iut-back-network:
+        ipv4_address: 172.55.0.10
+  projcine:
+    build:
+      context: ./build/projcinema
+    image: lpirm-dfs-projcinema
+    container_name: lpirm-dfs-projcine
+    ports:
+      - "9998:80"
+    volumes:
+      - "./projcinema/:/var/www/html/projcinema"
+    networks:
+      iut-back-network:
+        ipv4_address: 172.55.0.11
+    extra_hosts:
+      - "cine.ws:172.55.0.10"
+  mysql:
+    build:
+      context: build/mysql
+    image: lpirm-dfs-mysql
+    container_name: lpirm-dfs-mysql
+    volumes:
+      - "./mysql/:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: cine
+      MYSQL_USER: cine
+      MYSQL_PASSWORD: cine
+      MYSQL_ROOT_PASSWORD: cine
+    networks:
+      iut-back-network:
+        ipv4_address: 172.55.0.12
+networks:
+  iut-back-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 172.55.0.0/24

@@ -1,0 +1,3 @@
+c2d55a,172.55.0.1,GET,http://cine.loc:9999/app_dev.php/cinemas/3,1519815628,,200
+dae0ea,172.55.0.1,GET,http://cine.loc:9999/app_dev.php/cinema/3,1519815630,b85898,200
+b85898,172.55.0.1,GET,http://cine.loc:9999/app_dev.php/cinema/3,1519815630,,404

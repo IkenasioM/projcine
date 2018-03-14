@@ -1,0 +1,38 @@
+AppBundle\Entity\Cinema:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [nom]
+  properties:
+    nom:
+      - NotBlank: ~
+      - Type: string
+    adresse:
+      - NotBlank: ~
+      - Type: string
+    accessibilite:
+      - NotBlank: ~
+      - Type: boolean
+
+AppBundle\Entity\Film:
+  properties:
+    titre:
+      - NotBlank: ~
+      - Type : string
+    resume:
+      - NotBlank: ~
+      - Type : string
+    duree:
+      - NotBlank: ~
+      - Type : numeric
+      - GreaterThan:
+         value: 0
+
+AppBundle\Entity\Salle:
+  properties:
+    nomsalle:
+      - NotBlank: ~
+      - Type : string
+    capacite:
+      - NotBlank: ~
+      - Type : numeric
+      - GreaterThan:
+         value: 0

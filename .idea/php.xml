@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/cine/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/cine/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/cine/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/cine/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/cine/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/cine/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/cine/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/cine/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/cine/vendor/composer" />
+      <path value="$PROJECT_DIR$/cine/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/cine/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/cine/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/cine/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/cine/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/cine/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/cine/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/cine/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/cine/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/cine/vendor/exsyst/swagger" />
+      <path value="$PROJECT_DIR$/cine/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/cine/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/cine/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/cine/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/cine/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/cine/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/cine/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/cine/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/cine/vendor/sebastian/version" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/cine/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block title %}Application Cinema{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="container-fluid">
+        <h2>Ajouter un cinéma</h2>
+        <form>
+            <br>
+            <div class="form-group">
+                <label for="">Nom :</label>
+                <input type="text" class="form-control" placeholder="Entrez le nom du cinema">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Adresse :</label>
+                <input type="text" class="form-control" placeholder="Entrez l'adresse du cinema">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Accessibiltée :</label>
+                <input type="checkbox" class="form-check-input">
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+</div> 
+{% endblock %}

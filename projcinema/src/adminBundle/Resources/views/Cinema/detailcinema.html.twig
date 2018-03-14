@@ -1,0 +1,27 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block title %}adminBundle:Cinema:detailcinema{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Cinema:detailcinema page</h1>
+{{ cinema.nom }}
+    <ul>
+        {% for uneSalle in salle %}
+            <li>
+                {{ uneSalle.id }}
+                {{ uneSalle.nomsalle }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for unFilm in cinema %}
+            <li>
+                {{ unFilm.titre }}
+                {{ unFilm.resume }}
+                {{ unFilm.duree }} min
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "adminBundle::layout.html.twig" %}
+
+{% block body %}
+<h1>Espace administration</h1>
+
+<div class="container">
+    <div class="container-fluid">
+        <h2>Cinéma</h2>
+        <br>
+        <div class="row">
+        {% for cine in cinemas %}
+            <div class="col-md-8">{{ cine.nom }}</div>
+            <div class="col-md-4">
+                <a href="{{ path('detailcinema', {'id': cine.id}) }}" class="btn btn-success">Détail</a>
+            </div>
+        {% endfor %}
+        </div>
+        <br>
+        <a href="/addcinema" class="btn btn-default">Ajouter un cinema</a>
+        
+    </div>
+</div> 
+{% endblock %}
