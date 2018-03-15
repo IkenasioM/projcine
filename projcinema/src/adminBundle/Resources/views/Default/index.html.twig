@@ -1,10 +1,10 @@
-{% extends "adminBundle::layout.html.twig" %}
+
+      {% extends "adminBundle::layout.html.twig" %}
 
 {% block body %}
-<h1>Espace administration</h1>
-
 <div class="container">
-    <div class="container-fluid">
+    <div class="container-fluid .bg-light">
+        <h1>Espace administration</h1>
         <h2>Cinéma</h2>
         <br>
         <div class="row">
@@ -12,12 +12,12 @@
             <div class="col-md-8">{{ cine.nom }}</div>
             <div class="col-md-4">
                 <a href="{{ path('detailcinema', {'id': cine.id}) }}" class="btn btn-success">Détail</a>
-                <a href="{{ path('detailcinema', {'id': cine.id}) }}" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+                <a href="{{ path('deletecinema', {'id': cine.id}) }}" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
             </div>
         {% endfor %}
         </div>
         <br>
-        <a href="/addcinema" class="btn btn-default">Ajouter un cinema</a>
+        <a href="{{ path('addcinema') }}" class="btn btn-default">Ajouter un cinema</a>
     </div>
 </div> 
 {% endblock %}

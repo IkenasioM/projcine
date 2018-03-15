@@ -6,30 +6,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use adminBundle\Entity\Cinema;
 use adminBundle\Entity\Salle;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
 use Unirest;
 class CinemaController extends Controller
 {
     /**
      * @Route("/detailcinema/{id}", name="detailcinema")
      */
-    public function detailcinemaAction($id) //On lui demande un id du coup pour qu'il puisse le recuperer il faut le lui mettre en parametre
+    public function detailcinemaAction($id)
     {
-
         $headers = array('Accept' => 'application/json');
 
-        $cinemasResponse = Unirest\Request::get('http://cine.ws/cinemas/', $headers, null);
+        $cinemaResponse = Unirest\Request::get('http://cine.ws/cinemas/'.$id, $headers, null);
         $cinema = $cinemasResponse->body;
 
-        //$repository = $this->getDoctrine()->getManager()->getRepository('adminBundle:Cinema'); // Les films sont avec pas besoin de les rappeler
-        //$repositorySalle = $this->getDoctrine()->getManager()->getRepository('adminBundle:Salle');
-        //$cinema = $repository->find($id);
-        $salle = $repositorySalle->findBy(array ('cinema' => $cinema)); //on a plusieurs salles pour un cinema findbycinema permet de retrouver toutes les salles correspondantes
-        if ( null === $cinema ){
-            throw new NotFoundHttpException( "Ce cinema n'existe pas" );
-        }
-
-        return $this->render('adminBundle:Cinema:detailcinema.html.twig', array('salle' => $salle, 'cinema' => $cinema)); //render permet de faire la traduction du twig vers du HTML
+        return $this->render('adminBundle:Cinema:detailcinema.html.twig', array('cinema' => $cinema));
     }
 
     /**
@@ -43,12 +40,32 @@ class CinemaController extends Controller
     }
 
     /**
-     * @Route("/addcinema")
+     * @Route("/addcinema", name="addcinema")
+     * @Method ({"GET"})
      */
-    public function addcinemaAction()
+    public function addcinemaAction(Request $request)
     {
+        $form = $this->createFormBuilder()
+         ->add('nom', TextType::class)
+         ->add('adresse', TextType::class)
+         ->add('accessiblite', CheckboxType::class, array(
+             'label' => 'Est-il accesibilité aux personnes ayant un hadicape ?',
+             'required' => false
+         ))
+         ->add('save', SubmitType::class, array('label' => 'Ajouter'))
+         ->getForm();
+
+         $form->submit($request->request->all());
+
+         if ($form->isSubmitted() && $form->isValid()) {
+             var_dump($form->handleRequest($request));
+            //$headers = array('Accept' => 'application/json');
+            //$cinemaResponse = Unirest::post($url, $headers, $body);
+            //return $this->redirectToRoute('/a');
+        }
+
         return $this->render('adminBundle:Cinema:addcinema.html.twig', array(
-            // ...
+            'form' => $form->createView(),
         ));
     }
 
@@ -76,11 +93,16 @@ class CinemaController extends Controller
     /**
      * @Route("/deletecinema/{id}", name="deletecinema")
      */
-    public function deletecinemaAction()
+    public function deletecinemaAction($id)
     {
-        return $this->render('adminBundle:Cinema:gestfilm.html.twig', array(
-            // ...
-        ));
+        $headers = array('Accept' => 'application/json');
+
+        $cinemaResponse = Unirest\Request::delete('http://cine.ws/cinemas/'.$id, $headers, null);
+        $cinema = $cinemasResponse->body;
+
+        return $this->render('adminBundle:Default:index.html.twig', array('cinema' => $cinema));
+
+        //return $this->redirectToRoute('homepage');
     }
 
 }
